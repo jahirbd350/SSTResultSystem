@@ -1,0 +1,98 @@
+﻿@model SSTResultSystem.Models.result21
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>result21</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studentid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examterm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examterm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mat2131)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mat2131)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.che2122)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.che2122)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2133)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2133)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2134)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2134)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2135)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2135)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse21p6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse21p6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2137)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2137)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse21p8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse21p8)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

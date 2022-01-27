@@ -1,0 +1,93 @@
+﻿@model IEnumerable<SSTResultSystem.Models.student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.studentid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.studycenter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.batchno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.academicsession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fathername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mothername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobileno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bloodgroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.studentid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.studycenter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.batchno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.academicsession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fathername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mothername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobileno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bloodgroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

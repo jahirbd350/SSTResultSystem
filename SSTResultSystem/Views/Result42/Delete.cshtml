@@ -1,0 +1,96 @@
+﻿@model SSTResultSystem.Models.result42
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>result42</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studentid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examterm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examterm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse4231)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse4231)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse4232)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse4232)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse42p3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse42p3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse4234)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse4234)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse42p5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse42p5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse4246)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse4246)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse4227)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse4227)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

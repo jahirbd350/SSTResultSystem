@@ -1,0 +1,112 @@
+﻿@model SSTResultSystem.Models.result22
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>result22</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studentid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examterm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examterm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eco2221)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eco2221)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2232)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2232)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse22p3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse22p3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2234)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2234)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse22p5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse22p5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2236)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2236)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse22p7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse22p7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse2238)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse2238)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cse22p9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cse22p9)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SSTResultSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="255" />
+          <Property Name="credit" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="result11">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="eng1131" Type="float" />
+          <Property Name="phy1132" Type="float" />
+          <Property Name="bus1123" Type="float" />
+          <Property Name="mat1134" Type="float" />
+          <Property Name="eee1135" Type="float" />
+          <Property Name="eee11p6" Type="float" />
+          <Property Name="cse1127" Type="float" />
+          <Property Name="cse11p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result12">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat1231" Type="float" />
+          <Property Name="hum1222" Type="float" />
+          <Property Name="eee1233" Type="float" />
+          <Property Name="eee12p4" Type="float" />
+          <Property Name="cse1235" Type="float" />
+          <Property Name="cse12p6" Type="float" />
+          <Property Name="cse1237" Type="float" />
+          <Property Name="cse12p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result21">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat2131" Type="float" />
+          <Property Name="che2122" Type="float" />
+          <Property Name="cse2133" Type="float" />
+          <Property Name="cse2134" Type="float" />
+          <Property Name="cse2135" Type="float" />
+          <Property Name="cse21p6" Type="float" />
+          <Property Name="cse2137" Type="float" />
+          <Property Name="cse21p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result22">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="eco2221" Type="float" />
+          <Property Name="cse2232" Type="float" />
+          <Property Name="cse22p3" Type="float" />
+          <Property Name="cse2234" Type="float" />
+          <Property Name="cse22p5" Type="float" />
+          <Property Name="cse2236" Type="float" />
+          <Property Name="cse22p7" Type="float" />
+          <Property Name="cse2238" Type="float" />
+          <Property Name="cse22p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result31">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat3131" Type="float" />
+          <Property Name="cse3122" Type="float" />
+          <Property Name="cse3133" Type="float" />
+          <Property Name="cse3134" Type="float" />
+          <Property Name="cse31p5" Type="float" />
+          <Property Name="cse3136" Type="float" />
+          <Property Name="cse31p7" Type="float" />
+          <Property Name="cse31p8" Type="float" />
+          <Property Name="cse31p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result32">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse3221" Type="float" />
+          <Property Name="cse3232" Type="float" />
+          <Property Name="cse3233" Type="float" />
+          <Property Name="cse32p4" Type="float" />
+          <Property Name="cse3235" Type="float" />
+          <Property Name="cse32p6" Type="float" />
+          <Property Name="cse3237" Type="float" />
+          <Property Name="cse32p8" Type="float" />
+          <Property Name="cse32p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result41">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse4121" Type="float" />
+          <Property Name="cse4132" Type="float" />
+          <Property Name="cse4133" Type="float" />
+          <Property Name="cse41p4" Type="float" />
+          <Property Name="cse4135" Type="float" />
+          <Property Name="cse41p6" Type="float" />
+          <Property Name="cse4137" Type="float" />
+          <Property Name="cse41p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result42">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse4231" Type="float" />
+          <Property Name="cse4232" Type="float" />
+          <Property Name="cse42p3" Type="float" />
+          <Property Name="cse4234" Type="float" />
+          <Property Name="cse42p5" Type="float" />
+          <Property Name="cse4246" Type="float" />
+          <Property Name="cse4227" Type="float" />
+        </EntityType>
+        <EntityType Name="students">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="fullname" Type="varchar" MaxLength="100" />
+          <Property Name="studycenter" Type="varchar" MaxLength="100" />
+          <Property Name="batchno" Type="varchar" MaxLength="10" />
+          <Property Name="academicsession" Type="varchar" MaxLength="10" />
+          <Property Name="fathername" Type="varchar" MaxLength="100" />
+          <Property Name="mothername" Type="varchar" MaxLength="100" />
+          <Property Name="dob" Type="date" />
+          <Property Name="mobileno" Type="varchar" MaxLength="11" />
+          <Property Name="bloodgroup" Type="varchar" MaxLength="10" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="100" />
+          <Property Name="userrole" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result11__studen__2A4B4B5E' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result11__studen__2A4B4B5E" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result12__studen__2D27B809' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result12__studen__2D27B809" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result21__studen__300424B4' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result21__studen__300424B4" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result22__studen__32E0915F' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result22__studen__32E0915F" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result31__studen__35BCFE0A' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result31__studen__35BCFE0A" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result32__studen__38996AB5' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result32__studen__38996AB5" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result41__studen__3B75D760' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result41__studen__3B75D760" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__result42__studen__3E52440B" />-->
+        <EntityContainer Name="SSTResultSystemModelStoreContainer">
+          <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result11" EntityType="Self.result11" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result12" EntityType="Self.result12" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result21" EntityType="Self.result21" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result22" EntityType="Self.result22" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result31" EntityType="Self.result31" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result32" EntityType="Self.result32" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result41" EntityType="Self.result41" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result42" EntityType="Self.result42" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSTResultSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="credit" Type="Byte" />
+        </EntityType>
+        <EntityType Name="result11">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="eng1131" Type="Double" />
+          <Property Name="phy1132" Type="Double" />
+          <Property Name="bus1123" Type="Double" />
+          <Property Name="mat1134" Type="Double" />
+          <Property Name="eee1135" Type="Double" />
+          <Property Name="eee11p6" Type="Double" />
+          <Property Name="cse1127" Type="Double" />
+          <Property Name="cse11p8" Type="Double" />
+        </EntityType>
+        <EntityType Name="result12">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="mat1231" Type="Double" />
+          <Property Name="hum1222" Type="Double" />
+          <Property Name="eee1233" Type="Double" />
+          <Property Name="eee12p4" Type="Double" />
+          <Property Name="cse1235" Type="Double" />
+          <Property Name="cse12p6" Type="Double" />
+          <Property Name="cse1237" Type="Double" />
+          <Property Name="cse12p8" Type="Double" />
+        </EntityType>
+        <EntityType Name="result21">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="mat2131" Type="Double" />
+          <Property Name="che2122" Type="Double" />
+          <Property Name="cse2133" Type="Double" />
+          <Property Name="cse2134" Type="Double" />
+          <Property Name="cse2135" Type="Double" />
+          <Property Name="cse21p6" Type="Double" />
+          <Property Name="cse2137" Type="Double" />
+          <Property Name="cse21p8" Type="Double" />
+        </EntityType>
+        <EntityType Name="result22">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="eco2221" Type="Double" />
+          <Property Name="cse2232" Type="Double" />
+          <Property Name="cse22p3" Type="Double" />
+          <Property Name="cse2234" Type="Double" />
+          <Property Name="cse22p5" Type="Double" />
+          <Property Name="cse2236" Type="Double" />
+          <Property Name="cse22p7" Type="Double" />
+          <Property Name="cse2238" Type="Double" />
+          <Property Name="cse22p9" Type="Double" />
+        </EntityType>
+        <EntityType Name="result31">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="mat3131" Type="Double" />
+          <Property Name="cse3122" Type="Double" />
+          <Property Name="cse3133" Type="Double" />
+          <Property Name="cse3134" Type="Double" />
+          <Property Name="cse31p5" Type="Double" />
+          <Property Name="cse3136" Type="Double" />
+          <Property Name="cse31p7" Type="Double" />
+          <Property Name="cse31p8" Type="Double" />
+          <Property Name="cse31p9" Type="Double" />
+        </EntityType>
+        <EntityType Name="result32">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="cse3221" Type="Double" />
+          <Property Name="cse3232" Type="Double" />
+          <Property Name="cse3233" Type="Double" />
+          <Property Name="cse32p4" Type="Double" />
+          <Property Name="cse3235" Type="Double" />
+          <Property Name="cse32p6" Type="Double" />
+          <Property Name="cse3237" Type="Double" />
+          <Property Name="cse32p8" Type="Double" />
+          <Property Name="cse32p9" Type="Double" />
+        </EntityType>
+        <EntityType Name="result41">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="cse4121" Type="Double" />
+          <Property Name="cse4132" Type="Double" />
+          <Property Name="cse4133" Type="Double" />
+          <Property Name="cse41p4" Type="Double" />
+          <Property Name="cse4135" Type="Double" />
+          <Property Name="cse41p6" Type="Double" />
+          <Property Name="cse4137" Type="Double" />
+          <Property Name="cse41p8" Type="Double" />
+        </EntityType>
+        <EntityType Name="result42">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="examterm" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="cse4231" Type="Double" />
+          <Property Name="cse4232" Type="Double" />
+          <Property Name="cse42p3" Type="Double" />
+          <Property Name="cse4234" Type="Double" />
+          <Property Name="cse42p5" Type="Double" />
+          <Property Name="cse4246" Type="Double" />
+          <Property Name="cse4227" Type="Double" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="studycenter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="batchno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="academicsession" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fathername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mothername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="mobileno" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="bloodgroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="userrole" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SSTResultSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="courses" EntityType="Self.cours" />
+          <EntitySet Name="result11" EntityType="Self.result11" />
+          <EntitySet Name="result12" EntityType="Self.result12" />
+          <EntitySet Name="result21" EntityType="Self.result21" />
+          <EntitySet Name="result22" EntityType="Self.result22" />
+          <EntitySet Name="result31" EntityType="Self.result31" />
+          <EntitySet Name="result32" EntityType="Self.result32" />
+          <EntitySet Name="result41" EntityType="Self.result41" />
+          <EntitySet Name="result42" EntityType="Self.result42" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <EntitySet Name="users" EntityType="Self.user" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SSTResultSystemModelStoreContainer" CdmEntityContainer="SSTResultSystemEntities">
+          <EntitySetMapping Name="courses">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.cours">
+              <MappingFragment StoreEntitySet="courses">
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result11">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result11">
+              <MappingFragment StoreEntitySet="result11">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="eng1131" ColumnName="eng1131" />
+                <ScalarProperty Name="phy1132" ColumnName="phy1132" />
+                <ScalarProperty Name="bus1123" ColumnName="bus1123" />
+                <ScalarProperty Name="mat1134" ColumnName="mat1134" />
+                <ScalarProperty Name="eee1135" ColumnName="eee1135" />
+                <ScalarProperty Name="eee11p6" ColumnName="eee11p6" />
+                <ScalarProperty Name="cse1127" ColumnName="cse1127" />
+                <ScalarProperty Name="cse11p8" ColumnName="cse11p8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result12">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result12">
+              <MappingFragment StoreEntitySet="result12">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="mat1231" ColumnName="mat1231" />
+                <ScalarProperty Name="hum1222" ColumnName="hum1222" />
+                <ScalarProperty Name="eee1233" ColumnName="eee1233" />
+                <ScalarProperty Name="eee12p4" ColumnName="eee12p4" />
+                <ScalarProperty Name="cse1235" ColumnName="cse1235" />
+                <ScalarProperty Name="cse12p6" ColumnName="cse12p6" />
+                <ScalarProperty Name="cse1237" ColumnName="cse1237" />
+                <ScalarProperty Name="cse12p8" ColumnName="cse12p8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result21">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result21">
+              <MappingFragment StoreEntitySet="result21">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="mat2131" ColumnName="mat2131" />
+                <ScalarProperty Name="che2122" ColumnName="che2122" />
+                <ScalarProperty Name="cse2133" ColumnName="cse2133" />
+                <ScalarProperty Name="cse2134" ColumnName="cse2134" />
+                <ScalarProperty Name="cse2135" ColumnName="cse2135" />
+                <ScalarProperty Name="cse21p6" ColumnName="cse21p6" />
+                <ScalarProperty Name="cse2137" ColumnName="cse2137" />
+                <ScalarProperty Name="cse21p8" ColumnName="cse21p8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result22">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result22">
+              <MappingFragment StoreEntitySet="result22">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="eco2221" ColumnName="eco2221" />
+                <ScalarProperty Name="cse2232" ColumnName="cse2232" />
+                <ScalarProperty Name="cse22p3" ColumnName="cse22p3" />
+                <ScalarProperty Name="cse2234" ColumnName="cse2234" />
+                <ScalarProperty Name="cse22p5" ColumnName="cse22p5" />
+                <ScalarProperty Name="cse2236" ColumnName="cse2236" />
+                <ScalarProperty Name="cse22p7" ColumnName="cse22p7" />
+                <ScalarProperty Name="cse2238" ColumnName="cse2238" />
+                <ScalarProperty Name="cse22p9" ColumnName="cse22p9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result31">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result31">
+              <MappingFragment StoreEntitySet="result31">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="mat3131" ColumnName="mat3131" />
+                <ScalarProperty Name="cse3122" ColumnName="cse3122" />
+                <ScalarProperty Name="cse3133" ColumnName="cse3133" />
+                <ScalarProperty Name="cse3134" ColumnName="cse3134" />
+                <ScalarProperty Name="cse31p5" ColumnName="cse31p5" />
+                <ScalarProperty Name="cse3136" ColumnName="cse3136" />
+                <ScalarProperty Name="cse31p7" ColumnName="cse31p7" />
+                <ScalarProperty Name="cse31p8" ColumnName="cse31p8" />
+                <ScalarProperty Name="cse31p9" ColumnName="cse31p9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result32">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result32">
+              <MappingFragment StoreEntitySet="result32">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="cse3221" ColumnName="cse3221" />
+                <ScalarProperty Name="cse3232" ColumnName="cse3232" />
+                <ScalarProperty Name="cse3233" ColumnName="cse3233" />
+                <ScalarProperty Name="cse32p4" ColumnName="cse32p4" />
+                <ScalarProperty Name="cse3235" ColumnName="cse3235" />
+                <ScalarProperty Name="cse32p6" ColumnName="cse32p6" />
+                <ScalarProperty Name="cse3237" ColumnName="cse3237" />
+                <ScalarProperty Name="cse32p8" ColumnName="cse32p8" />
+                <ScalarProperty Name="cse32p9" ColumnName="cse32p9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result41">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result41">
+              <MappingFragment StoreEntitySet="result41">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="cse4121" ColumnName="cse4121" />
+                <ScalarProperty Name="cse4132" ColumnName="cse4132" />
+                <ScalarProperty Name="cse4133" ColumnName="cse4133" />
+                <ScalarProperty Name="cse41p4" ColumnName="cse41p4" />
+                <ScalarProperty Name="cse4135" ColumnName="cse4135" />
+                <ScalarProperty Name="cse41p6" ColumnName="cse41p6" />
+                <ScalarProperty Name="cse4137" ColumnName="cse4137" />
+                <ScalarProperty Name="cse41p8" ColumnName="cse41p8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="result42">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.result42">
+              <MappingFragment StoreEntitySet="result42">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="examterm" ColumnName="examterm" />
+                <ScalarProperty Name="cse4231" ColumnName="cse4231" />
+                <ScalarProperty Name="cse4232" ColumnName="cse4232" />
+                <ScalarProperty Name="cse42p3" ColumnName="cse42p3" />
+                <ScalarProperty Name="cse4234" ColumnName="cse4234" />
+                <ScalarProperty Name="cse42p5" ColumnName="cse42p5" />
+                <ScalarProperty Name="cse4246" ColumnName="cse4246" />
+                <ScalarProperty Name="cse4227" ColumnName="cse4227" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.student">
+              <MappingFragment StoreEntitySet="students">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="studycenter" ColumnName="studycenter" />
+                <ScalarProperty Name="batchno" ColumnName="batchno" />
+                <ScalarProperty Name="academicsession" ColumnName="academicsession" />
+                <ScalarProperty Name="fathername" ColumnName="fathername" />
+                <ScalarProperty Name="mothername" ColumnName="mothername" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="userrole" ColumnName="userrole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

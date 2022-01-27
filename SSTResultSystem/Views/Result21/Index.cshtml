@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SSTResultSystem.Models.result21>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.studentid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.examterm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mat2131)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.che2122)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse2133)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse2134)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse2135)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse21p6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse2137)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse21p8)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.studentid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examterm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mat2131)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.che2122)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse2133)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse2134)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse2135)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse21p6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse2137)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cse21p8)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
