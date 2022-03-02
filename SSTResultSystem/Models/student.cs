@@ -11,8 +11,7 @@ namespace SSTResultSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,8 +28,6 @@ namespace SSTResultSystem.Models
         }
     
         public int id { get; set; }
-
-        [RegularExpression("^([0-9]{2})-([0-9]{1})-([0-9]{2})-([0-9]{3})-([0-9]{3})$", ErrorMessage = "Invalid input")]
         public string studentid { get; set; }
         public string fullname { get; set; }
         public string studycenter { get; set; }

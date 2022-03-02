@@ -10,18 +10,18 @@ using SSTResultSystem.Models;
 
 namespace SSTResultSystem.Controllers
 {
-    public class StudentController : Controller
+    public class StudentsController : Controller
     {
         private SSTResultSystemEntities db = new SSTResultSystemEntities();
 
-        // GET: Student
+        // GET: Students
         public ActionResult Index()
         {
             return View(db.students.ToList());
         }
 
-        // GET: Student/Details/5
-        public ActionResult Details(int? id)
+        // GET: Students/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -35,13 +35,13 @@ namespace SSTResultSystem.Controllers
             return View(student);
         }
 
-        // GET: Student/Create
+        // GET: Students/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Student/Create
+        // POST: Students/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,8 +58,8 @@ namespace SSTResultSystem.Controllers
             return View(student);
         }
 
-        // GET: Student/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Students/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -73,7 +73,7 @@ namespace SSTResultSystem.Controllers
             return View(student);
         }
 
-        // POST: Student/Edit/5
+        // POST: Students/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,8 +89,8 @@ namespace SSTResultSystem.Controllers
             return View(student);
         }
 
-        // GET: Student/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Students/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -104,10 +104,10 @@ namespace SSTResultSystem.Controllers
             return View(student);
         }
 
-        // POST: Student/Delete/5
+        // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             student student = db.students.Find(id);
             db.students.Remove(student);

@@ -136,7 +136,7 @@
     <Compile Include="Controllers\Result41Controller.cs" />
     <Compile Include="Controllers\Result42Controller.cs" />
     <Compile Include="Controllers\ResultController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,6 +219,7 @@
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
       <LastGenOutput>SSTResultSystemDBModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\SSTResultSystemDBModel.edmx.sql" />
     <Content Include="Models\SSTResultSystemDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
@@ -330,16 +331,16 @@
     <Content Include="Views\Result42\Details.cshtml" />
     <Content Include="Views\Result42\Edit.cshtml" />
     <Content Include="Views\Result42\Index.cshtml" />
-    <Content Include="Views\Student\Create.cshtml" />
-    <Content Include="Views\Student\Delete.cshtml" />
-    <Content Include="Views\Student\Details.cshtml" />
-    <Content Include="Views\Student\Edit.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
