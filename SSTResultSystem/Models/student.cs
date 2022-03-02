@@ -11,10 +11,26 @@ namespace SSTResultSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public student()
+        {
+            this.result11 = new HashSet<result11>();
+            this.result12 = new HashSet<result12>();
+            this.result21 = new HashSet<result21>();
+            this.result22 = new HashSet<result22>();
+            this.result31 = new HashSet<result31>();
+            this.result32 = new HashSet<result32>();
+            this.result41 = new HashSet<result41>();
+            this.result42 = new HashSet<result42>();
+        }
+    
         public int id { get; set; }
+
+        [RegularExpression("^([0-9]{2})-([0-9]{1})-([0-9]{2})-([0-9]{3})-([0-9]{3})$", ErrorMessage = "Invalid input")]
         public string studentid { get; set; }
         public string fullname { get; set; }
         public string studycenter { get; set; }
@@ -26,6 +42,22 @@ namespace SSTResultSystem.Models
         public string mobileno { get; set; }
         public string bloodgroup { get; set; }
         public string address { get; set; }
-
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result11> result11 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result12> result12 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result21> result21 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result22> result22 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result31> result31 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result32> result32 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result41> result41 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<result42> result42 { get; set; }
     }
 }

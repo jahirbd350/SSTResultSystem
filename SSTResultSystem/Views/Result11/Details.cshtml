@@ -1,7 +1,7 @@
-﻿@model SSTResultSystem.Models.Result11StudentJoin
+﻿@model SSTResultSystem.Models.result11
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "1st Sem Result";
 }
 
 @*<h2>Details</h2>
@@ -141,7 +141,7 @@
                                 <strong />
                             </td>
                             <td width="414">
-                                <b>: @Html.DisplayFor(model => model.result11.studentid)</b>
+                                <b>: @Html.DisplayFor(model => model.studentid)</b>
                             </td>
                         </tr>
                         <tr bgcolor="#FFFFFF">
@@ -161,7 +161,7 @@
                         <tr bgcolor="#FFFFFF">
                             <td colspan="2">Exam Term</td>
                             <td>
-                                <b>: @Html.DisplayFor(model => model.result11.examterm)</b>
+                                <b>: @Html.DisplayFor(model => model.examterm)</b>
 
                             </td>
                         </tr>
@@ -170,7 +170,7 @@
                             <td colspan="2">Session</td>
                             <td>
                                 <b>:</b>
-                                @Html.DisplayFor(model => model.student.batchno)
+                                @Html.DisplayFor(model => model.student.academicsession)
                             </td>
                         </tr>
                         <!--<tr bgcolor="#FFFFFF">
@@ -233,7 +233,7 @@
                                 <font color="#000000">3.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.eng1131)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.eng1131)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -247,7 +247,7 @@
                                 <font color="#000000">3.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.phy1132)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.phy1132)</font>
                             </td>
                         </tr>
 
@@ -262,7 +262,7 @@
                                 <font color="#000000">2.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.bus1123)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.bus1123)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -276,7 +276,7 @@
                                 <font color="#000000">3.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.mat1134)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.mat1134)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -290,7 +290,7 @@
                                 <font color="#000000">3.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.eee1135)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.eee1135)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -304,7 +304,7 @@
                                 <font color="#000000">0.75</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.eng1131)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.eng1131)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -318,7 +318,7 @@
                                 <font color="#000000">2.0</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.cse1127)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.cse1127)</font>
                             </td>
                         </tr>
                         <tr align="center" bgcolor="#FFFFFF">
@@ -332,7 +332,7 @@
                                 <font color="#000000">0.75</font>
                             </td>
                             <td>
-                                <font color="#000000">@Html.DisplayFor(model => model.result11.cse11p8)</font>
+                                <font color="#000000">@Html.DisplayFor(model => model.cse11p8)</font>
                             </td>
                         </tr>
                         <!-- <tr bgcolor="#C6FFFF">

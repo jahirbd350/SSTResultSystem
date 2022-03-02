@@ -4,18 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f5059b708849414ba3be9fc2880af216" Name="Diagram1">
-        <EntityTypeShape EntityType="SSTResultSystemModel.cours" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result11" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result12" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result21" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result22" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result31" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result32" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result41" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.result42" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.student" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSTResultSystemModel.user" Width="1.5" PointX="0.625" PointY="9" IsExpanded="true" />
+      <Diagram DiagramId="83ab53e41d19433ba446bd8f27f285c8" Name="Diagram1">
+        <EntityTypeShape EntityType="SSTResultSystemModel.cours" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result11" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result12" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result21" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result22" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result31" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result32" Width="1.5" PointX="3" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result41" Width="1.5" PointX="3" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.result42" Width="1.5" PointX="3" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.student" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.user" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result11__studen__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result12__studen__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result21__studen__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result22__studen__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result31__studen__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result32__studen__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result41__studen__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="SSTResultSystemModel.FK__result42__studen__3D5E1FD2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

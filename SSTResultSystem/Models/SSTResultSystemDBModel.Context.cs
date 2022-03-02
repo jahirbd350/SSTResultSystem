@@ -35,6 +35,7 @@ namespace SSTResultSystem.Models
         public virtual DbSet<result41> result41 { get; set; }
         public virtual DbSet<result42> result42 { get; set; }
         public virtual DbSet<student> students { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<user> users { get; set; }
     }
 }

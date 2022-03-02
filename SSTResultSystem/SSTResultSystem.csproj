@@ -147,7 +147,6 @@
     <Compile Include="Models\result11.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Result11StudentJoin.cs" />
     <Compile Include="Models\result12.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
@@ -187,6 +186,9 @@
     <Compile Include="Models\student.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\user.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
@@ -217,18 +219,10 @@
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
       <LastGenOutput>SSTResultSystemDBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\SSTResultSystemDBModel.edmx.sql" />
     <Content Include="Models\SSTResultSystemDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
       <LastGenOutput>SSTResultSystemDBModel.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Models\SSTResultSystemDBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SSTResultSystemDBModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\SSTResultSystemDBModel.edmx.diagram">
-      <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -258,6 +252,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\SSTResultSystemDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SSTResultSystemDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SSTResultSystemDBModel.edmx.diagram">
+      <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

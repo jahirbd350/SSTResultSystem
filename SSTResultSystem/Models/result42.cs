@@ -24,5 +24,7 @@ namespace SSTResultSystem.Models
         public Nullable<double> cse42p5 { get; set; }
         public Nullable<double> cse4246 { get; set; }
         public Nullable<double> cse4227 { get; set; }
+    
+        public virtual student student { get; set; }
     }
 }
