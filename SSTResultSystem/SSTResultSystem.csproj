@@ -147,6 +147,7 @@
     <Compile Include="Models\result11.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Result11StudentJoin.cs" />
     <Compile Include="Models\result12.cs">
       <DependentUpon>SSTResultSystemDBModel.tt</DependentUpon>
     </Compile>
@@ -216,6 +217,7 @@
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>
       <LastGenOutput>SSTResultSystemDBModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\SSTResultSystemDBModel.edmx.sql" />
     <Content Include="Models\SSTResultSystemDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SSTResultSystemDBModel.edmx</DependentUpon>

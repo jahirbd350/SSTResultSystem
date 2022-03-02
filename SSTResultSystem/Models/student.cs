@@ -26,5 +26,6 @@ namespace SSTResultSystem.Models
         public string mobileno { get; set; }
         public string bloodgroup { get; set; }
         public string address { get; set; }
+
     }
 }

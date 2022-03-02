@@ -11,17 +11,10 @@ namespace SSTResultSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class result11
     {
         public int id { get; set; }
-
-        [Display(Name="Student Full ID: ")]
-        [Required]
-        //[RegularExpression("xx-x-xx-xxx-xxx", ErrorMessage ="Student ID Must match the pattern!")]
-        [MinLength(15)]
-        [MaxLength(15)]
         public string studentid { get; set; }
         public string examterm { get; set; }
         public Nullable<double> eng1131 { get; set; }
@@ -32,5 +25,6 @@ namespace SSTResultSystem.Models
         public Nullable<double> eee11p6 { get; set; }
         public Nullable<double> cse1127 { get; set; }
         public Nullable<double> cse11p8 { get; set; }
+
     }
 }

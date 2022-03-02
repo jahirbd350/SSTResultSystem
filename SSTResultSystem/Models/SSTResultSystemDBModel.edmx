@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SSTResultSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SSTResultSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="courses">
           <Key>
             <PropertyRef Name="code" />
@@ -155,7 +155,7 @@
           <Property Name="academicsession" Type="varchar" MaxLength="10" />
           <Property Name="fathername" Type="varchar" MaxLength="100" />
           <Property Name="mothername" Type="varchar" MaxLength="100" />
-          <Property Name="dob" Type="date" />
+          <Property Name="dob" Type="datetime" />
           <Property Name="mobileno" Type="varchar" MaxLength="11" />
           <Property Name="bloodgroup" Type="varchar" MaxLength="10" />
           <Property Name="address" Type="varchar" MaxLength="255" />
@@ -169,30 +169,6 @@
           <Property Name="password" Type="varchar" MaxLength="100" />
           <Property Name="userrole" Type="varchar" MaxLength="1" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result11__studen__2A4B4B5E' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result11__studen__2A4B4B5E" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result12__studen__2D27B809' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result12__studen__2D27B809" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result21__studen__300424B4' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result21__studen__300424B4" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result22__studen__32E0915F' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result22__studen__32E0915F" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result31__studen__35BCFE0A' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result31__studen__35BCFE0A" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result32__studen__38996AB5' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result32__studen__38996AB5" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result41__studen__3B75D760' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result41__studen__3B75D760" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__result42__studen__3E52440B" />-->
         <EntityContainer Name="SSTResultSystemModelStoreContainer">
           <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="result11" EntityType="Self.result11" Schema="dbo" store:Type="Tables" />
@@ -206,8 +182,7 @@ warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that
           <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SSTResultSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -361,7 +336,7 @@ warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that
           <Property Name="academicsession" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="fathername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="mothername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="dob" Type="DateTime" Precision="3" />
           <Property Name="mobileno" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="bloodgroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -392,186 +367,185 @@ warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SSTResultSystemModelStoreContainer" CdmEntityContainer="SSTResultSystemEntities">
-          <EntitySetMapping Name="courses">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.cours">
-              <MappingFragment StoreEntitySet="courses">
-                <ScalarProperty Name="code" ColumnName="code" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="credit" ColumnName="credit" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result11">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result11">
-              <MappingFragment StoreEntitySet="result11">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="eng1131" ColumnName="eng1131" />
-                <ScalarProperty Name="phy1132" ColumnName="phy1132" />
-                <ScalarProperty Name="bus1123" ColumnName="bus1123" />
-                <ScalarProperty Name="mat1134" ColumnName="mat1134" />
-                <ScalarProperty Name="eee1135" ColumnName="eee1135" />
-                <ScalarProperty Name="eee11p6" ColumnName="eee11p6" />
-                <ScalarProperty Name="cse1127" ColumnName="cse1127" />
-                <ScalarProperty Name="cse11p8" ColumnName="cse11p8" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result12">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result12">
-              <MappingFragment StoreEntitySet="result12">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="mat1231" ColumnName="mat1231" />
-                <ScalarProperty Name="hum1222" ColumnName="hum1222" />
-                <ScalarProperty Name="eee1233" ColumnName="eee1233" />
-                <ScalarProperty Name="eee12p4" ColumnName="eee12p4" />
-                <ScalarProperty Name="cse1235" ColumnName="cse1235" />
-                <ScalarProperty Name="cse12p6" ColumnName="cse12p6" />
-                <ScalarProperty Name="cse1237" ColumnName="cse1237" />
-                <ScalarProperty Name="cse12p8" ColumnName="cse12p8" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result21">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result21">
-              <MappingFragment StoreEntitySet="result21">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="mat2131" ColumnName="mat2131" />
-                <ScalarProperty Name="che2122" ColumnName="che2122" />
-                <ScalarProperty Name="cse2133" ColumnName="cse2133" />
-                <ScalarProperty Name="cse2134" ColumnName="cse2134" />
-                <ScalarProperty Name="cse2135" ColumnName="cse2135" />
-                <ScalarProperty Name="cse21p6" ColumnName="cse21p6" />
-                <ScalarProperty Name="cse2137" ColumnName="cse2137" />
-                <ScalarProperty Name="cse21p8" ColumnName="cse21p8" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result22">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result22">
-              <MappingFragment StoreEntitySet="result22">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="eco2221" ColumnName="eco2221" />
-                <ScalarProperty Name="cse2232" ColumnName="cse2232" />
-                <ScalarProperty Name="cse22p3" ColumnName="cse22p3" />
-                <ScalarProperty Name="cse2234" ColumnName="cse2234" />
-                <ScalarProperty Name="cse22p5" ColumnName="cse22p5" />
-                <ScalarProperty Name="cse2236" ColumnName="cse2236" />
-                <ScalarProperty Name="cse22p7" ColumnName="cse22p7" />
-                <ScalarProperty Name="cse2238" ColumnName="cse2238" />
-                <ScalarProperty Name="cse22p9" ColumnName="cse22p9" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result31">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result31">
-              <MappingFragment StoreEntitySet="result31">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="mat3131" ColumnName="mat3131" />
-                <ScalarProperty Name="cse3122" ColumnName="cse3122" />
-                <ScalarProperty Name="cse3133" ColumnName="cse3133" />
-                <ScalarProperty Name="cse3134" ColumnName="cse3134" />
-                <ScalarProperty Name="cse31p5" ColumnName="cse31p5" />
-                <ScalarProperty Name="cse3136" ColumnName="cse3136" />
-                <ScalarProperty Name="cse31p7" ColumnName="cse31p7" />
-                <ScalarProperty Name="cse31p8" ColumnName="cse31p8" />
-                <ScalarProperty Name="cse31p9" ColumnName="cse31p9" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result32">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result32">
-              <MappingFragment StoreEntitySet="result32">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="cse3221" ColumnName="cse3221" />
-                <ScalarProperty Name="cse3232" ColumnName="cse3232" />
-                <ScalarProperty Name="cse3233" ColumnName="cse3233" />
-                <ScalarProperty Name="cse32p4" ColumnName="cse32p4" />
-                <ScalarProperty Name="cse3235" ColumnName="cse3235" />
-                <ScalarProperty Name="cse32p6" ColumnName="cse32p6" />
-                <ScalarProperty Name="cse3237" ColumnName="cse3237" />
-                <ScalarProperty Name="cse32p8" ColumnName="cse32p8" />
-                <ScalarProperty Name="cse32p9" ColumnName="cse32p9" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result41">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result41">
-              <MappingFragment StoreEntitySet="result41">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="cse4121" ColumnName="cse4121" />
-                <ScalarProperty Name="cse4132" ColumnName="cse4132" />
-                <ScalarProperty Name="cse4133" ColumnName="cse4133" />
-                <ScalarProperty Name="cse41p4" ColumnName="cse41p4" />
-                <ScalarProperty Name="cse4135" ColumnName="cse4135" />
-                <ScalarProperty Name="cse41p6" ColumnName="cse41p6" />
-                <ScalarProperty Name="cse4137" ColumnName="cse4137" />
-                <ScalarProperty Name="cse41p8" ColumnName="cse41p8" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="result42">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.result42">
-              <MappingFragment StoreEntitySet="result42">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="examterm" ColumnName="examterm" />
-                <ScalarProperty Name="cse4231" ColumnName="cse4231" />
-                <ScalarProperty Name="cse4232" ColumnName="cse4232" />
-                <ScalarProperty Name="cse42p3" ColumnName="cse42p3" />
-                <ScalarProperty Name="cse4234" ColumnName="cse4234" />
-                <ScalarProperty Name="cse42p5" ColumnName="cse42p5" />
-                <ScalarProperty Name="cse4246" ColumnName="cse4246" />
-                <ScalarProperty Name="cse4227" ColumnName="cse4227" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="students">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.student">
-              <MappingFragment StoreEntitySet="students">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="studentid" ColumnName="studentid" />
-                <ScalarProperty Name="fullname" ColumnName="fullname" />
-                <ScalarProperty Name="studycenter" ColumnName="studycenter" />
-                <ScalarProperty Name="batchno" ColumnName="batchno" />
-                <ScalarProperty Name="academicsession" ColumnName="academicsession" />
-                <ScalarProperty Name="fathername" ColumnName="fathername" />
-                <ScalarProperty Name="mothername" ColumnName="mothername" />
-                <ScalarProperty Name="dob" ColumnName="dob" />
-                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
-                <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
-                <ScalarProperty Name="address" ColumnName="address" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="users">
-            <EntityTypeMapping TypeName="SSTResultSystemModel.user">
-              <MappingFragment StoreEntitySet="users">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="userrole" ColumnName="userrole" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SSTResultSystemModelStoreContainer" CdmEntityContainer="SSTResultSystemEntities">
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.cours)">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="credit" ColumnName="credit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result11">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result11)">
+        <MappingFragment StoreEntitySet="result11">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="eng1131" ColumnName="eng1131" />
+          <ScalarProperty Name="phy1132" ColumnName="phy1132" />
+          <ScalarProperty Name="bus1123" ColumnName="bus1123" />
+          <ScalarProperty Name="mat1134" ColumnName="mat1134" />
+          <ScalarProperty Name="eee1135" ColumnName="eee1135" />
+          <ScalarProperty Name="eee11p6" ColumnName="eee11p6" />
+          <ScalarProperty Name="cse1127" ColumnName="cse1127" />
+          <ScalarProperty Name="cse11p8" ColumnName="cse11p8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result12">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result12)">
+        <MappingFragment StoreEntitySet="result12">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="mat1231" ColumnName="mat1231" />
+          <ScalarProperty Name="hum1222" ColumnName="hum1222" />
+          <ScalarProperty Name="eee1233" ColumnName="eee1233" />
+          <ScalarProperty Name="eee12p4" ColumnName="eee12p4" />
+          <ScalarProperty Name="cse1235" ColumnName="cse1235" />
+          <ScalarProperty Name="cse12p6" ColumnName="cse12p6" />
+          <ScalarProperty Name="cse1237" ColumnName="cse1237" />
+          <ScalarProperty Name="cse12p8" ColumnName="cse12p8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result21">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result21)">
+        <MappingFragment StoreEntitySet="result21">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="mat2131" ColumnName="mat2131" />
+          <ScalarProperty Name="che2122" ColumnName="che2122" />
+          <ScalarProperty Name="cse2133" ColumnName="cse2133" />
+          <ScalarProperty Name="cse2134" ColumnName="cse2134" />
+          <ScalarProperty Name="cse2135" ColumnName="cse2135" />
+          <ScalarProperty Name="cse21p6" ColumnName="cse21p6" />
+          <ScalarProperty Name="cse2137" ColumnName="cse2137" />
+          <ScalarProperty Name="cse21p8" ColumnName="cse21p8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result22">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result22)">
+        <MappingFragment StoreEntitySet="result22">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="eco2221" ColumnName="eco2221" />
+          <ScalarProperty Name="cse2232" ColumnName="cse2232" />
+          <ScalarProperty Name="cse22p3" ColumnName="cse22p3" />
+          <ScalarProperty Name="cse2234" ColumnName="cse2234" />
+          <ScalarProperty Name="cse22p5" ColumnName="cse22p5" />
+          <ScalarProperty Name="cse2236" ColumnName="cse2236" />
+          <ScalarProperty Name="cse22p7" ColumnName="cse22p7" />
+          <ScalarProperty Name="cse2238" ColumnName="cse2238" />
+          <ScalarProperty Name="cse22p9" ColumnName="cse22p9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result31">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result31)">
+        <MappingFragment StoreEntitySet="result31">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="mat3131" ColumnName="mat3131" />
+          <ScalarProperty Name="cse3122" ColumnName="cse3122" />
+          <ScalarProperty Name="cse3133" ColumnName="cse3133" />
+          <ScalarProperty Name="cse3134" ColumnName="cse3134" />
+          <ScalarProperty Name="cse31p5" ColumnName="cse31p5" />
+          <ScalarProperty Name="cse3136" ColumnName="cse3136" />
+          <ScalarProperty Name="cse31p7" ColumnName="cse31p7" />
+          <ScalarProperty Name="cse31p8" ColumnName="cse31p8" />
+          <ScalarProperty Name="cse31p9" ColumnName="cse31p9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result32">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result32)">
+        <MappingFragment StoreEntitySet="result32">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="cse3221" ColumnName="cse3221" />
+          <ScalarProperty Name="cse3232" ColumnName="cse3232" />
+          <ScalarProperty Name="cse3233" ColumnName="cse3233" />
+          <ScalarProperty Name="cse32p4" ColumnName="cse32p4" />
+          <ScalarProperty Name="cse3235" ColumnName="cse3235" />
+          <ScalarProperty Name="cse32p6" ColumnName="cse32p6" />
+          <ScalarProperty Name="cse3237" ColumnName="cse3237" />
+          <ScalarProperty Name="cse32p8" ColumnName="cse32p8" />
+          <ScalarProperty Name="cse32p9" ColumnName="cse32p9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result41">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result41)">
+        <MappingFragment StoreEntitySet="result41">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="cse4121" ColumnName="cse4121" />
+          <ScalarProperty Name="cse4132" ColumnName="cse4132" />
+          <ScalarProperty Name="cse4133" ColumnName="cse4133" />
+          <ScalarProperty Name="cse41p4" ColumnName="cse41p4" />
+          <ScalarProperty Name="cse4135" ColumnName="cse4135" />
+          <ScalarProperty Name="cse41p6" ColumnName="cse41p6" />
+          <ScalarProperty Name="cse4137" ColumnName="cse4137" />
+          <ScalarProperty Name="cse41p8" ColumnName="cse41p8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="result42">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result42)">
+        <MappingFragment StoreEntitySet="result42">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="examterm" ColumnName="examterm" />
+          <ScalarProperty Name="cse4231" ColumnName="cse4231" />
+          <ScalarProperty Name="cse4232" ColumnName="cse4232" />
+          <ScalarProperty Name="cse42p3" ColumnName="cse42p3" />
+          <ScalarProperty Name="cse4234" ColumnName="cse4234" />
+          <ScalarProperty Name="cse42p5" ColumnName="cse42p5" />
+          <ScalarProperty Name="cse4246" ColumnName="cse4246" />
+          <ScalarProperty Name="cse4227" ColumnName="cse4227" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.student)">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="studycenter" ColumnName="studycenter" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="academicsession" ColumnName="academicsession" />
+          <ScalarProperty Name="fathername" ColumnName="fathername" />
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.user)">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userrole" ColumnName="userrole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -585,7 +559,7 @@ warning 6035: The relationship 'FK__result42__studen__3E52440B' has columns that
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
