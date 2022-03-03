@@ -78,7 +78,7 @@ namespace SSTResultSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,studentid,fullname,studycenter,batchno,academicsession,fathername,mothername,dob,mobileno,bloodgroup,address")] student student)
+        public ActionResult Edit([Bind(Include = "studentid,fullname,studycenter,batchno,academicsession,fathername,mothername,dob,mobileno,bloodgroup,address")] student student)
         {
             if (ModelState.IsValid)
             {
