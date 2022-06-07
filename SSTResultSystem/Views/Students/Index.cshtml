@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2 class="text-center text-primary text-decoration-underline">List of All Students</h2>
@@ -9,7 +10,7 @@
 <p class="text-end">
     @Html.ActionLink("Add New Student", "Create", "StudentsController", new { @class = "btn btn-info" })
 </p>
-<table class="table table-bordered">
+<table class="table table-bordered" id="datatablesSimple">
     <tr>
         <th>Sl. No</th>
         <th>

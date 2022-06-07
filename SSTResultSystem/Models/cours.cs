@@ -16,6 +16,6 @@ namespace SSTResultSystem.Models
     {
         public string code { get; set; }
         public string title { get; set; }
-        public Nullable<byte> credit { get; set; }
+        public Nullable<float> credit { get; set; }
     }
 }

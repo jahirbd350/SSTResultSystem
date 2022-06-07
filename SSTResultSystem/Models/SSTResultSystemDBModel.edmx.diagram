@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="83ab53e41d19433ba446bd8f27f285c8" Name="Diagram1">
-        <EntityTypeShape EntityType="SSTResultSystemModel.cours" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SSTResultSystemModel.result11" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SSTResultSystemModel.result12" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SSTResultSystemModel.result21" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
@@ -25,6 +24,7 @@
         <AssociationConnector Association="SSTResultSystemModel.FK__result32__studen__37A5467C" ManuallyRouted="false" />
         <AssociationConnector Association="SSTResultSystemModel.FK__result41__studen__3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="SSTResultSystemModel.FK__result42__studen__3D5E1FD2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SSTResultSystemModel.cours" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

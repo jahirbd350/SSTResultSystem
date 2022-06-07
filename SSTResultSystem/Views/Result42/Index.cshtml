@@ -2,14 +2,15 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="text-center text-primary text-decoration-underline">4th Year 2nd Semester</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="text-end text-xl-end">
+    @Html.ActionLink("Create New", "Create", "Result42Controller", new { @class = "btn btn-info" })
 </p>
-<table class="table">
+<table class="table table-bordered table-striped" id="datatablesSimple">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.studentid)
@@ -38,7 +39,7 @@
         <th>
             @Html.DisplayNameFor(model => model.cse4227)
         </th>
-        <th></th>
+        <th>Action</th>
     </tr>
 
 @foreach (var item in Model) {

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SSTResultSystem.Models.result11>
+
+@{
+    ViewBag.Title = "SemResult";
+}
+
+<h2 class="text-center text-decoration-underline">Semister Wise Result</h2>
+
+<table class="table table-bordered table-striped">
+    <tr class="text-center">
+        <th>
+            @Html.DisplayNameFor(model => model.studentid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.examterm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eng1131)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phy1132)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bus1123)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mat1134)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eee1135)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eee11p6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse1127)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cse11p8)
+        </th>
+        <th>CGPA</th>
+        @*<th>Action</th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="text-center">
+            <td>
+                @Html.DisplayFor(modelItem => item.studentid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.examterm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eng1131)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phy1132)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bus1123)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mat1134)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eee1135)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eee11p6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cse1127)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cse11p8)
+            </td>
+            <td></td>
+           @* <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>*@
+        </tr>
+    }
+
+</table>

@@ -25,7 +25,6 @@ namespace SSTResultSystem.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<cours> courses { get; set; }
         public virtual DbSet<result11> result11 { get; set; }
         public virtual DbSet<result12> result12 { get; set; }
         public virtual DbSet<result21> result21 { get; set; }
@@ -37,5 +36,6 @@ namespace SSTResultSystem.Models
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<cours> courses { get; set; }
     }
 }

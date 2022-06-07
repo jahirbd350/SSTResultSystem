@@ -3,18 +3,14 @@
     ViewBag.Title = "Report Genration";
 }
 
-<h2 class="text-center">Report Generation</h2>
+<h2 class="text-center">Semester Result</h2>
 <hr />
 
-@using (Html.BeginForm("ReportGeneration", "Result"))
+@using (Html.BeginForm("ReportGeneration", "Report"))
 {
     @Html.AntiForgeryToken()
     <div class="row">
-        <div class="form-group col-md-3">
-            <label for="StudentId">Student ID</label>
-            <input type="text" name="StudentId" class="form-control" id="StudentId" placeholder="Example: xx-x-xx-xxx-xxx" required>
-        </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 offset-2">
             <label for="ExamTerm">Exam Term</label>
             <input type="text" name="ExamTerm" class="form-control" id="ExamTerm" placeholder="Example: xxx" required>
         </div>

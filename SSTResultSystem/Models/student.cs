@@ -11,8 +11,7 @@ namespace SSTResultSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,45 +26,18 @@ namespace SSTResultSystem.Models
             this.result41 = new HashSet<result41>();
             this.result42 = new HashSet<result42>();
         }
-
+    
         public int id { get; set; }
-
-        [Display(Name = "Student ID: ")]
-        [RegularExpression("[0-9]{2}-[0-9]{1}-[0-9]{2}-[0-9]{3}-[0-9]{3}", ErrorMessage="Please enter Student ID Correctly!")]
         public string studentid { get; set; }
-
-        [Display(Name = "Full Name: ")]
         public string fullname { get; set; }
-
-        [Display(Name = "Study Center: ")]
         public string studycenter { get; set; }
-
-        [Display(Name = "Student Batch No: ")]
         public string batchno { get; set; }
-
-        [Display(Name = "Acdemic Session: ")]
         public string academicsession { get; set; }
-
-        [Display(Name = "Father Name: ")]
         public string fathername { get; set; }
-
-        [Display(Name = "Mother Name: ")]
         public string mothername { get; set; }
-
-        [DataType(DataType.Date)]
-        [Display(Name = "Date of birth: ")]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MMM/yyyy}")]
-        [DisplayFormat(DataFormatString = "{0:d}")]
-        public DateTime? dob { get; set; }
-        //public Nullable<System.DateTime> dob { get; set; }
-
-        [Display(Name = "Mobile No: ")]
+        public Nullable<System.DateTime> dob { get; set; }
         public string mobileno { get; set; }
-
-        [Display(Name = "Blood Group: ")]
         public string bloodgroup { get; set; }
-
-        [Display(Name = "Address: ")]
         public string address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

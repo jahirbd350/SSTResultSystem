@@ -4,335 +4,327 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SSTResultSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="SSTResultSystemModelStoreContainer">
-    <EntitySet Name="courses" EntityType="SSTResultSystemModel.Store.courses" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result11" EntityType="SSTResultSystemModel.Store.result11" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result12" EntityType="SSTResultSystemModel.Store.result12" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result21" EntityType="SSTResultSystemModel.Store.result21" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result22" EntityType="SSTResultSystemModel.Store.result22" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result31" EntityType="SSTResultSystemModel.Store.result31" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result32" EntityType="SSTResultSystemModel.Store.result32" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result41" EntityType="SSTResultSystemModel.Store.result41" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="result42" EntityType="SSTResultSystemModel.Store.result42" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="students" EntityType="SSTResultSystemModel.Store.students" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="sysdiagrams" EntityType="SSTResultSystemModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="users" EntityType="SSTResultSystemModel.Store.users" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK__result11__studen__29572725" Association="SSTResultSystemModel.Store.FK__result11__studen__29572725">
-      <End Role="students" EntitySet="students" />
-      <End Role="result11" EntitySet="result11" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result12__studen__2C3393D0" Association="SSTResultSystemModel.Store.FK__result12__studen__2C3393D0">
-      <End Role="students" EntitySet="students" />
-      <End Role="result12" EntitySet="result12" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result21__studen__2F10007B" Association="SSTResultSystemModel.Store.FK__result21__studen__2F10007B">
-      <End Role="students" EntitySet="students" />
-      <End Role="result21" EntitySet="result21" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result22__studen__31EC6D26" Association="SSTResultSystemModel.Store.FK__result22__studen__31EC6D26">
-      <End Role="students" EntitySet="students" />
-      <End Role="result22" EntitySet="result22" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result31__studen__34C8D9D1" Association="SSTResultSystemModel.Store.FK__result31__studen__34C8D9D1">
-      <End Role="students" EntitySet="students" />
-      <End Role="result31" EntitySet="result31" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result32__studen__37A5467C" Association="SSTResultSystemModel.Store.FK__result32__studen__37A5467C">
-      <End Role="students" EntitySet="students" />
-      <End Role="result32" EntitySet="result32" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result41__studen__3A81B327" Association="SSTResultSystemModel.Store.FK__result41__studen__3A81B327">
-      <End Role="students" EntitySet="students" />
-      <End Role="result41" EntitySet="result41" />
-    </AssociationSet>
-    <AssociationSet Name="FK__result42__studen__3D5E1FD2" Association="SSTResultSystemModel.Store.FK__result42__studen__3D5E1FD2">
-      <End Role="students" EntitySet="students" />
-      <End Role="result42" EntitySet="result42" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="courses">
-    <Key>
-      <PropertyRef Name="code" />
-    </Key>
-    <Property Name="code" Type="varchar" Nullable="false" MaxLength="7" />
-    <Property Name="title" Type="varchar" Nullable="true" MaxLength="255" />
-    <Property Name="credit" Type="tinyint" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result11">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="eng1131" Type="float" Nullable="true" />
-    <Property Name="phy1132" Type="float" Nullable="true" />
-    <Property Name="bus1123" Type="float" Nullable="true" />
-    <Property Name="mat1134" Type="float" Nullable="true" />
-    <Property Name="eee1135" Type="float" Nullable="true" />
-    <Property Name="eee11p6" Type="float" Nullable="true" />
-    <Property Name="cse1127" Type="float" Nullable="true" />
-    <Property Name="cse11p8" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result12">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="mat1231" Type="float" Nullable="true" />
-    <Property Name="hum1222" Type="float" Nullable="true" />
-    <Property Name="eee1233" Type="float" Nullable="true" />
-    <Property Name="eee12p4" Type="float" Nullable="true" />
-    <Property Name="cse1235" Type="float" Nullable="true" />
-    <Property Name="cse12p6" Type="float" Nullable="true" />
-    <Property Name="cse1237" Type="float" Nullable="true" />
-    <Property Name="cse12p8" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result21">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="mat2131" Type="float" Nullable="true" />
-    <Property Name="che2122" Type="float" Nullable="true" />
-    <Property Name="cse2133" Type="float" Nullable="true" />
-    <Property Name="cse2134" Type="float" Nullable="true" />
-    <Property Name="cse2135" Type="float" Nullable="true" />
-    <Property Name="cse21p6" Type="float" Nullable="true" />
-    <Property Name="cse2137" Type="float" Nullable="true" />
-    <Property Name="cse21p8" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result22">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="eco2221" Type="float" Nullable="true" />
-    <Property Name="cse2232" Type="float" Nullable="true" />
-    <Property Name="cse22p3" Type="float" Nullable="true" />
-    <Property Name="cse2234" Type="float" Nullable="true" />
-    <Property Name="cse22p5" Type="float" Nullable="true" />
-    <Property Name="cse2236" Type="float" Nullable="true" />
-    <Property Name="cse22p7" Type="float" Nullable="true" />
-    <Property Name="cse2238" Type="float" Nullable="true" />
-    <Property Name="cse22p9" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result31">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="mat3131" Type="float" Nullable="true" />
-    <Property Name="cse3122" Type="float" Nullable="true" />
-    <Property Name="cse3133" Type="float" Nullable="true" />
-    <Property Name="cse3134" Type="float" Nullable="true" />
-    <Property Name="cse31p5" Type="float" Nullable="true" />
-    <Property Name="cse3136" Type="float" Nullable="true" />
-    <Property Name="cse31p7" Type="float" Nullable="true" />
-    <Property Name="cse31p8" Type="float" Nullable="true" />
-    <Property Name="cse31p9" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result32">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="cse3221" Type="float" Nullable="true" />
-    <Property Name="cse3232" Type="float" Nullable="true" />
-    <Property Name="cse3233" Type="float" Nullable="true" />
-    <Property Name="cse32p4" Type="float" Nullable="true" />
-    <Property Name="cse3235" Type="float" Nullable="true" />
-    <Property Name="cse32p6" Type="float" Nullable="true" />
-    <Property Name="cse3237" Type="float" Nullable="true" />
-    <Property Name="cse32p8" Type="float" Nullable="true" />
-    <Property Name="cse32p9" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result41">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="cse4121" Type="float" Nullable="true" />
-    <Property Name="cse4132" Type="float" Nullable="true" />
-    <Property Name="cse4133" Type="float" Nullable="true" />
-    <Property Name="cse41p4" Type="float" Nullable="true" />
-    <Property Name="cse4135" Type="float" Nullable="true" />
-    <Property Name="cse41p6" Type="float" Nullable="true" />
-    <Property Name="cse4137" Type="float" Nullable="true" />
-    <Property Name="cse41p8" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="result42">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="true" MaxLength="15" />
-    <Property Name="examterm" Type="varchar" Nullable="true" MaxLength="3" />
-    <Property Name="cse4231" Type="float" Nullable="true" />
-    <Property Name="cse4232" Type="float" Nullable="true" />
-    <Property Name="cse42p3" Type="float" Nullable="true" />
-    <Property Name="cse4234" Type="float" Nullable="true" />
-    <Property Name="cse42p5" Type="float" Nullable="true" />
-    <Property Name="cse4246" Type="float" Nullable="true" />
-    <Property Name="cse4227" Type="float" Nullable="true" />
-  </EntityType>
-  <EntityType Name="students">
-    <Key>
-      <PropertyRef Name="studentid" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="studentid" Type="varchar" Nullable="false" MaxLength="15" />
-    <Property Name="fullname" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="studycenter" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="batchno" Type="varchar" Nullable="true" MaxLength="10" />
-    <Property Name="academicsession" Type="varchar" Nullable="true" MaxLength="10" />
-    <Property Name="fathername" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="mothername" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="dob" Type="datetime" Nullable="true" />
-    <Property Name="mobileno" Type="varchar" Nullable="true" MaxLength="11" />
-    <Property Name="bloodgroup" Type="varchar" Nullable="true" MaxLength="10" />
-    <Property Name="address" Type="varchar" Nullable="true" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" Nullable="true" />
-    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
-  </EntityType>
-  <EntityType Name="users">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="username" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="password" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="userrole" Type="varchar" Nullable="true" MaxLength="1" />
-  </EntityType>
-  <Association Name="FK__result11__studen__29572725">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result11" Type="SSTResultSystemModel.Store.result11" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result11">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result12__studen__2C3393D0">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result12" Type="SSTResultSystemModel.Store.result12" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result12">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result21__studen__2F10007B">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result21" Type="SSTResultSystemModel.Store.result21" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result21">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result22__studen__31EC6D26">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result22" Type="SSTResultSystemModel.Store.result22" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result22">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result31__studen__34C8D9D1">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result31" Type="SSTResultSystemModel.Store.result31" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result31">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result32__studen__37A5467C">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result32" Type="SSTResultSystemModel.Store.result32" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result32">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result41__studen__3A81B327">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result41" Type="SSTResultSystemModel.Store.result41" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result41">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__result42__studen__3D5E1FD2">
-    <End Role="students" Type="SSTResultSystemModel.Store.students" Multiplicity="0..1" />
-    <End Role="result42" Type="SSTResultSystemModel.Store.result42" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="students">
-        <PropertyRef Name="studentid" />
-      </Principal>
-      <Dependent Role="result42">
-        <PropertyRef Name="studentid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema></edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="SSTResultSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="cours">
+    <Schema Namespace="SSTResultSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="courses">
           <Key>
             <PropertyRef Name="code" />
           </Key>
-          <Property Name="code" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="credit" Type="Byte" />
+          <Property Name="code" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="255" />
+          <Property Name="credit" Type="real" />
         </EntityType>
+        <EntityType Name="result11">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="eng1131" Type="float" />
+          <Property Name="phy1132" Type="float" />
+          <Property Name="bus1123" Type="float" />
+          <Property Name="mat1134" Type="float" />
+          <Property Name="eee1135" Type="float" />
+          <Property Name="eee11p6" Type="float" />
+          <Property Name="cse1127" Type="float" />
+          <Property Name="cse11p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result12">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat1231" Type="float" />
+          <Property Name="hum1222" Type="float" />
+          <Property Name="eee1233" Type="float" />
+          <Property Name="eee12p4" Type="float" />
+          <Property Name="cse1235" Type="float" />
+          <Property Name="cse12p6" Type="float" />
+          <Property Name="cse1237" Type="float" />
+          <Property Name="cse12p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result21">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat2131" Type="float" />
+          <Property Name="che2122" Type="float" />
+          <Property Name="cse2133" Type="float" />
+          <Property Name="cse2134" Type="float" />
+          <Property Name="cse2135" Type="float" />
+          <Property Name="cse21p6" Type="float" />
+          <Property Name="cse2137" Type="float" />
+          <Property Name="cse21p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result22">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="eco2221" Type="float" />
+          <Property Name="cse2232" Type="float" />
+          <Property Name="cse22p3" Type="float" />
+          <Property Name="cse2234" Type="float" />
+          <Property Name="cse22p5" Type="float" />
+          <Property Name="cse2236" Type="float" />
+          <Property Name="cse22p7" Type="float" />
+          <Property Name="cse2238" Type="float" />
+          <Property Name="cse22p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result31">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="mat3131" Type="float" />
+          <Property Name="cse3122" Type="float" />
+          <Property Name="cse3133" Type="float" />
+          <Property Name="cse3134" Type="float" />
+          <Property Name="cse31p5" Type="float" />
+          <Property Name="cse3136" Type="float" />
+          <Property Name="cse31p7" Type="float" />
+          <Property Name="cse31p8" Type="float" />
+          <Property Name="cse31p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result32">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse3221" Type="float" />
+          <Property Name="cse3232" Type="float" />
+          <Property Name="cse3233" Type="float" />
+          <Property Name="cse32p4" Type="float" />
+          <Property Name="cse3235" Type="float" />
+          <Property Name="cse32p6" Type="float" />
+          <Property Name="cse3237" Type="float" />
+          <Property Name="cse32p8" Type="float" />
+          <Property Name="cse32p9" Type="float" />
+        </EntityType>
+        <EntityType Name="result41">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse4121" Type="float" />
+          <Property Name="cse4132" Type="float" />
+          <Property Name="cse4133" Type="float" />
+          <Property Name="cse41p4" Type="float" />
+          <Property Name="cse4135" Type="float" />
+          <Property Name="cse41p6" Type="float" />
+          <Property Name="cse4137" Type="float" />
+          <Property Name="cse41p8" Type="float" />
+        </EntityType>
+        <EntityType Name="result42">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" />
+          <Property Name="examterm" Type="varchar" MaxLength="3" />
+          <Property Name="cse4231" Type="float" />
+          <Property Name="cse4232" Type="float" />
+          <Property Name="cse42p3" Type="float" />
+          <Property Name="cse4234" Type="float" />
+          <Property Name="cse42p5" Type="float" />
+          <Property Name="cse4246" Type="float" />
+          <Property Name="cse4227" Type="float" />
+        </EntityType>
+        <EntityType Name="students">
+          <Key>
+            <PropertyRef Name="studentid" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentid" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="fullname" Type="varchar" MaxLength="100" />
+          <Property Name="studycenter" Type="varchar" MaxLength="100" />
+          <Property Name="batchno" Type="varchar" MaxLength="10" />
+          <Property Name="academicsession" Type="varchar" MaxLength="10" />
+          <Property Name="fathername" Type="varchar" MaxLength="100" />
+          <Property Name="mothername" Type="varchar" MaxLength="100" />
+          <Property Name="dob" Type="datetime" />
+          <Property Name="mobileno" Type="varchar" MaxLength="11" />
+          <Property Name="bloodgroup" Type="varchar" MaxLength="10" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="100" />
+          <Property Name="userrole" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK__result11__studen__29572725">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result11" Type="Self.result11" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result11">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result12__studen__2C3393D0">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result12" Type="Self.result12" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result12">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result21__studen__2F10007B">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result21" Type="Self.result21" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result21">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result22__studen__31EC6D26">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result22" Type="Self.result22" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result22">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result31__studen__34C8D9D1">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result31" Type="Self.result31" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result31">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result32__studen__37A5467C">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result32" Type="Self.result32" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result32">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result41__studen__3A81B327">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result41" Type="Self.result41" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result41">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__result42__studen__3D5E1FD2">
+          <End Role="students" Type="Self.students" Multiplicity="0..1" />
+          <End Role="result42" Type="Self.result42" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="students">
+              <PropertyRef Name="studentid" />
+            </Principal>
+            <Dependent Role="result42">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SSTResultSystemModelStoreContainer">
+          <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result11" EntityType="Self.result11" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result12" EntityType="Self.result12" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result21" EntityType="Self.result21" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result22" EntityType="Self.result22" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result31" EntityType="Self.result31" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result32" EntityType="Self.result32" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result41" EntityType="Self.result41" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="result42" EntityType="Self.result42" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__result11__studen__29572725" Association="Self.FK__result11__studen__29572725">
+            <End Role="students" EntitySet="students" />
+            <End Role="result11" EntitySet="result11" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result12__studen__2C3393D0" Association="Self.FK__result12__studen__2C3393D0">
+            <End Role="students" EntitySet="students" />
+            <End Role="result12" EntitySet="result12" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result21__studen__2F10007B" Association="Self.FK__result21__studen__2F10007B">
+            <End Role="students" EntitySet="students" />
+            <End Role="result21" EntitySet="result21" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result22__studen__31EC6D26" Association="Self.FK__result22__studen__31EC6D26">
+            <End Role="students" EntitySet="students" />
+            <End Role="result22" EntitySet="result22" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result31__studen__34C8D9D1" Association="Self.FK__result31__studen__34C8D9D1">
+            <End Role="students" EntitySet="students" />
+            <End Role="result31" EntitySet="result31" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result32__studen__37A5467C" Association="Self.FK__result32__studen__37A5467C">
+            <End Role="students" EntitySet="students" />
+            <End Role="result32" EntitySet="result32" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result41__studen__3A81B327" Association="Self.FK__result41__studen__3A81B327">
+            <End Role="students" EntitySet="students" />
+            <End Role="result41" EntitySet="result41" />
+          </AssociationSet>
+          <AssociationSet Name="FK__result42__studen__3D5E1FD2" Association="Self.FK__result42__studen__3D5E1FD2">
+            <End Role="students" EntitySet="students" />
+            <End Role="result42" EntitySet="result42" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSTResultSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="result11">
           <Key>
             <PropertyRef Name="id" />
@@ -483,7 +475,7 @@
           <Property Name="academicsession" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="fathername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="mothername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="dob" Type="DateTime" Precision="3" />
           <Property Name="mobileno" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="bloodgroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -612,7 +604,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="SSTResultSystemEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="courses" EntityType="Self.cours" />
           <EntitySet Name="result11" EntityType="Self.result11" />
           <EntitySet Name="result12" EntityType="Self.result12" />
           <EntitySet Name="result21" EntityType="Self.result21" />
@@ -656,22 +647,22 @@
             <End Role="students" EntitySet="students" />
             <End Role="result42" EntitySet="result42" />
           </AssociationSet>
+          <EntitySet Name="courses" EntityType="SSTResultSystemModel.cours" />
         </EntityContainer>
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="credit" Type="Single" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SSTResultSystemModelStoreContainer" CdmEntityContainer="SSTResultSystemEntities">
-    <EntitySetMapping Name="courses">
-      <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.cours)">
-        <MappingFragment StoreEntitySet="courses">
-          <ScalarProperty Name="code" ColumnName="code" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="credit" ColumnName="credit" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="result11">
       <EntityTypeMapping TypeName="IsTypeOf(SSTResultSystemModel.result11)">
         <MappingFragment StoreEntitySet="result11">
@@ -849,6 +840,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+          <EntitySetMapping Name="courses">
+            <EntityTypeMapping TypeName="SSTResultSystemModel.cours">
+              <MappingFragment StoreEntitySet="courses">
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="code" ColumnName="code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

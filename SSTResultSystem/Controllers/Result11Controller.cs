@@ -15,9 +15,15 @@ namespace SSTResultSystem.Controllers
         private SSTResultSystemEntities db = new SSTResultSystemEntities();
 
         // GET: Result11
+        
         public ActionResult Index()
         {
             return View(db.result11.ToList());
+        }
+        
+        public ActionResult SemResult(string examterm)
+        {
+            return View(db.result11.Where(x => x.examterm == examterm).ToList());
         }
 
         // GET: Result11/Details/5
